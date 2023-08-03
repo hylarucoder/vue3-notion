@@ -10,7 +10,11 @@ const alt = computed(() => {
 });
 
 const src = computed(() => {
-  return props.mapImageUrl(properties.value?.source[0][0], block.value);
+  const srcComputed = props.mapImageUrl(properties.value?.source[0][0], block.value);
+  if (srcComputed.includes("width")) {
+    return srcComputed.replace(/width=\d+/, `width=${f.value.block_width}`);
+  }
+  return srcComputed + `&width=${f.value.block_width}`;
 });
 
 const aspectRatioStyle = computed(() => {
@@ -44,7 +48,7 @@ export default {
 
 <template>
   <div v-if="f.block_aspect_ratio" :style="aspectRatioStyle">
-    <img class="notion-image-inset" :alt="alt || 'Notion image'" :src="src" />
+    <img loading="lazy" class="notion-image-inset" :alt="alt || 'Notion image'" :src="src" />
   </div>
-  <img v-else :alt="alt" :src="src" :style="basicStyle" />
+  <img loading="lazy" v-else :alt="alt" :src="src" :style="basicStyle" />
 </template>
