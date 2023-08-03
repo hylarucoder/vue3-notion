@@ -44,26 +44,27 @@
     "deploy": "npm run build && npm version patch && npm publish"
   },
   "dependencies": {
-    "katex": "^0.15.1",
-    "prismjs": "^1.25.0",
-    "vue": "^3.2.26"
+    "katex": "^0.16.8",
+    "prismjs": "^1.29.0",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@nuxt/kit": "^3.4.3",
-    "@types/katex": "^0.11.1",
-    "@types/node": "^20.1.1",
-    "@types/prismjs": "^1.16.6",
-    "@vitejs/plugin-vue": "^4.2.1",
-    "@vueuse/core": "^8.7.5",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.5",
-    "vite-plugin-dts": "^2.3.0",
+    "@nuxt/kit": "^3.6.5",
+    "@types/katex": "^0.16.2",
+    "@types/node": "^20.4.6",
+    "@types/prismjs": "^1.26.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vueuse/core": "^10.3.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.8",
+    "vite-plugin-dts": "^3.4.0",
+    "@nuxt/image": "1.0.0-rc.1",
     "vue-router": "4",
-    "vue-tsc": "^1.6.4"
+    "vue-tsc": "^1.8.8"
   },
   "peerDependencies": {
-    "katex": "^0.15.1",
-    "prismjs": "^1.25.0",
+    "katex": "^0.16.8",
+    "prismjs": "^1.29.0",
     "vue": "^3.2.20"
   }
 }
